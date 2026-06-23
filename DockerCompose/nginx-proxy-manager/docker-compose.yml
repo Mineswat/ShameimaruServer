@@ -26,4 +26,3 @@ services:
       - ./letsencryp:/etc/letsencrypt
 
   volumes:
-    npm_vol:
