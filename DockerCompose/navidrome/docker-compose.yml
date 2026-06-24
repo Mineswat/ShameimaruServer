@@ -18,6 +18,7 @@ services:
       - ND_TRANSCODINGCACHESIZE=100MB
       - ND_SESSIONTIMEOUT=24h
       - ND_DEFAULTDOWNLOADABLESHARE=true
+      - ND_ENABLEINSIGHTSCOLLECTOR=false
     volumes:
       - navi_vol:/data
       - omvNetwork:/music:ro

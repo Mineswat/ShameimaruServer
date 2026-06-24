@@ -24,3 +24,5 @@ services:
     volumes:
       - ./data:/data
       - ./letsencryp:/etc/letsencrypt
+  volumes:
+   npm_vol:
