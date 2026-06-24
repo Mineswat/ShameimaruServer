@@ -1,0 +1,26 @@
+services:
+  nginx_proxy_manager:
+    image: 'elct9620/perforce'
+    restart: unless-stopped
+    container_name: perforce
+
+    ports:
+      # These ports are in format <host-port>:<container-port>
+      - '1666:1666' # Perforce Port Entry
+
+    environment:
+      TZ: "Europe/London"
+
+      # Uncomment this if you want to change the location of
+      # the SQLite DB file within the container
+      # DB_SQLITE_FILE: "/data/database.sqlite"
+
+      # Uncomment this if IPv6 is not enabled on your host
+      # DISABLE_IPV6: 'true'
+
+    volumes:
+      - nvol:/data
+      - ./letsencryp:/etc/letsencrypt
+
+volumes:
+ nvol:
