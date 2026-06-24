@@ -22,7 +22,7 @@ services:
       # DISABLE_IPV6: 'true'
 
     volumes:
-      - ./data:/data
+      - .npm_vol:/data
       - ./letsencryp:/etc/letsencrypt
   volumes:
    npm_vol:
