@@ -22,7 +22,7 @@ services:
       # DISABLE_IPV6: 'true'
 
     volumes:
-      - .nvol:/data
+      - nvol:/data
       - ./letsencryp:/etc/letsencrypt
   volumes:
    nvol:
