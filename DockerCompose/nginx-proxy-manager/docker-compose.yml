@@ -1,7 +1,8 @@
 services:
-  app:
+  nginx_proxy_manager:
     image: 'jc21/nginx-proxy-manager:2.15.1'
     restart: unless-stopped
+    container_name: nginx_manager
 
     ports:
       # These ports are in format <host-port>:<container-port>
@@ -24,5 +25,6 @@ services:
     volumes:
       - nvol:/data
       - ./letsencryp:/etc/letsencrypt
-  volumes:
-   nvol:
+
+volumes:
+ nvol:
