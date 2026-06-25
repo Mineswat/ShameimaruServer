@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DockerCompose/cloudflared/Untitled.md",
+                "file": "DockerCompose/cloudflared/Cloudflare.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Cloudflare"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DockerCompose/cloudflared/Untitled.md",
+                "file": "DockerCompose/cloudflared/Cloudflare.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Untitled"
+              "title": "Backlinks for Cloudflare"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DockerCompose/cloudflared/Untitled.md",
+                "file": "DockerCompose/cloudflared/Cloudflare.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Untitled"
+              "title": "Outgoing links from Cloudflare"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DockerCompose/cloudflared/Untitled.md",
+                "file": "DockerCompose/cloudflared/Cloudflare.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline of Cloudflare"
             }
           },
           {
@@ -197,7 +197,7 @@
   "active": "7b5b481bbcee9b60",
   "lastOpenFiles": [
     "README.md",
-    "DockerCompose/cloudflared/Untitled.md",
+    "DockerCompose/cloudflared/Cloudflare.md",
     "thumbbig-916677.webp"
   ]
 }
