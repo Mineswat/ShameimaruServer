@@ -1,26 +1,15 @@
+# Example docker-compose.yml snippet for p4d
+version: '3'
 services:
-  nginx_proxy_manager:
-    image: 'elct9620/perforce'
-    restart: unless-stopped
-    container_name: perforce
-
+  perforce:
+    image: ambakshi/perforce-server
+    hostname: perforce
     ports:
-      # These ports are in format <host-port>:<container-port>
-      - '1666:1666' # Perforce Port Entry
-
-    environment:
-      TZ: "Europe/London"
-
-      # Uncomment this if you want to change the location of
-      # the SQLite DB file within the container
-      # DB_SQLITE_FILE: "/data/database.sqlite"
-
-      # Uncomment this if IPv6 is not enabled on your host
-      # DISABLE_IPV6: 'true'
-
+      - "1666:1666"
     volumes:
-      - nvol:/data
-      - ./letsencryp:/etc/letsencrypt
+      - p4depot:/data
+    env_file:
+      - ./envfile
 
 volumes:
- nvol:
+  p4depot:   
