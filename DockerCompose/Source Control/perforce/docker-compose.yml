@@ -1,15 +1,11 @@
-# Example docker-compose.yml snippet for p4d
-version: '3'
 services:
-  perforce:
-    image: ambakshi/perforce-server
-    hostname: perforce
+  p4d:
+    image: rayyounghong/perforce-helix-core:latest
+    container_name: p4d
     ports:
       - "1666:1666"
+    environment:
+      - P4PORT=1666
     volumes:
-      - p4depot:/data
-    env_file:
-      - ./envfile
-
-volumes:
-  p4depot:   
+      - ./perforce:/perforce
+    restart: unless-stopped
