@@ -19,7 +19,9 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 
 how to allow root ssh
 
-1. sudo passwd root. create a 
+1. sudo passwd root. create a root password
+2. enable ssh password root to be SSH'D by  
+
 
 . **Set the Password**: Use `sudo passwd root` to create a password for the root account. 
     
