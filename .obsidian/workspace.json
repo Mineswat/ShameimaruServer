@@ -194,8 +194,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7b5b481bbcee9b60",
+  "active": "6887d7be0598dfd6",
   "lastOpenFiles": [
+    "DockerCompose/homarr/docker-compose.yml",
+    "DockerCompose/homarr",
     "README.md",
     "Setup Steps for installing Server Debian.md",
     "DockerCompose/cloudflared/Cloudflare.md",
