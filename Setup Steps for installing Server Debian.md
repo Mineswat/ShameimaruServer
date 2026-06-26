@@ -1,5 +1,4 @@
 
-
 ```
 sudo apt update
 sudo apt install ca-certificates curl
@@ -17,11 +16,11 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 ```
 
 
-how to allow root ssh
+# Allowing Root SSH
 
 1. sudo passwd root. create a root password
 2. enable ssh password root to be SSH'D by  
-3. r
+3. Restart sssh
 ```
    nano /etc/ssh/sshd_config 
    # find PermitRootLogin to yes and uncomment it
@@ -29,9 +28,3 @@ how to allow root ssh
 
 ```
  
-
-. **Set the Password**: Use `sudo passwd root` to create a password for the root account. 
-    
-2. **Enable SSH Access**: Edit `/etc/ssh/sshd_config` and change `PermitRootLogin` to `yes` (or `without-password` to allow only SSH key authentication). 
-    
-3. **Restart Service**: Run `sudo systemctl restart ssh` to apply changes
