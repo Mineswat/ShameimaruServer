@@ -21,11 +21,14 @@ how to allow root ssh
 
 1. sudo passwd root. create a root password
 2. enable ssh password root to be SSH'D by  
+3. r
 ```
    nano /etc/ssh/sshd_config 
-   # find PermitRootLogin to
-```
+   # find PermitRootLogin to yes and uncomment it
+   sudo systemctl restart ssh
 
+```
+ 
 
 . **Set the Password**: Use `sudo passwd root` to create a password for the root account. 
     
