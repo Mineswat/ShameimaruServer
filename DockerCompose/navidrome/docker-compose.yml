@@ -20,13 +20,15 @@ services:
       - ND_DEFAULTDOWNLOADABLESHARE=true
       - ND_ENABLEINSIGHTSCOLLECTOR=false
     volumes:
-      - navi_vol:/data
+      #- navi_vol:/data
       - omvNetwork:/music:ro
+      - omvNetwork:/appdata/navidrome/data
+
       #- ./music:/music:ro
 
 
 volumes:
-  navi_vol:
+ # navi_vol:
 
   omvNetwork:
     external: true
