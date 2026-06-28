@@ -11,7 +11,7 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - tconfig:/config
-      - /path/to/downloads:/downloads #optional
+      - Root-OMV:/Downloads #optional
     ports:
       - 8080:8080
       - 6881:6881
@@ -21,3 +21,5 @@ services:
 
 volumes:
  tconfig:
+ Root-OMV:
+   external: true
