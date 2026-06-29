@@ -8,14 +8,14 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
       - WEBUI_PORT=8080
-      - TORRENTING_PORT=6881
+      - TORRENTING_PORT=14972
     volumes:
       - tconfig:/config
       - Root-OMV:/Downloads #optional
     ports:
       - 8080:8080
-      - 6881:6881
-      - 6881:6881/udp
+      - 14972:14972
+      - 14972:14972/udp
     stop_grace_period: "10s" #optional
     restart: unless-stopped
 
