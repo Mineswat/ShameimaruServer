@@ -76,3 +76,12 @@ volumes:
   model-cache:
   media-omv:
    external: true
+  
+  database-omv:
+  # ts used for smb
+    driver_opts:
+      type: cifs
+      o: 'iocharset=utf8,username=Mineswat,password=Komaru1!,rw' # change to `ro` if read only desired
+      device: "//192.168.0.88/Root"
+
+  
