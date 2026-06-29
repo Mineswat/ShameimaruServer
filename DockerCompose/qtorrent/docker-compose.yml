@@ -14,8 +14,8 @@ services:
       - Root-OMV:/Downloads #optional
     ports:
       - 8080:8080
-      - 14972:14972
-      - 14972:14972/udp
+      - 6887:6887
+      - 6887:6887/udp
     stop_grace_period: "10s" #optional
     restart: unless-stopped
 
