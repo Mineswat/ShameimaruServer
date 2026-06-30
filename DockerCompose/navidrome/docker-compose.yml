@@ -46,7 +46,7 @@ services:
       #- navi_vol:/data
      # - omv-navi:/music:ro
       - omv-navi:/music:ro
-      - omv-navi:/data
+      - omv-navi-DB:/data
 
       #- ./music:/music:ro
     #Resource limits cpu/memory
@@ -64,3 +64,11 @@ volumes:
       type: cifs
       o: 'iocharset=utf8,username=Mineswat,password=Komaru1!,rw' # change to `ro` if read only desired
       device: "//192.168.0.88/Root/Media/Media/Music"
+
+  omv-navi-DB:
+    driver_opts:
+      type: cifs
+      o: 'iocharset=utf8,username=Mineswat,password=Komaru1!,rw' # change to `ro` if read only desired
+      device: "//192.168.0.88/Root/appdata/navidrome"
+
+#make another volume
