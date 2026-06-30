@@ -45,7 +45,7 @@ services:
     volumes:
       #- navi_vol:/data
      # - omv-navi:/music:ro
-      - omv-navi:/Media/Media/Music:ro
+      - omv-navi:/Music:ro
       - omv-navi:/appdata/navidrome/data
 
       #- ./music:/music:ro
@@ -63,4 +63,4 @@ volumes:
     driver_opts:
       type: cifs
       o: 'iocharset=utf8,username=Mineswat,password=Komaru1!,rw' # change to `ro` if read only desired
-      device: "//192.168.0.88/Root"
+      device: "//192.168.0.88/Root/Media/Media/Music"
