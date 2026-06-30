@@ -194,8 +194,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7b5b481bbcee9b60",
+  "active": "1fc6fc15de8963df",
   "lastOpenFiles": [
+    "DockerCompose/wordpress/docker-compose.yml",
+    "DockerCompose/wordpress",
     "Setup Steps for installing Server Debian.md",
     "Docker Storage.md",
     "DockerCompose/homarr/docker-compose.yml",
