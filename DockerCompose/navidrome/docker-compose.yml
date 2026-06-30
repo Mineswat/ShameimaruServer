@@ -34,8 +34,6 @@ services:
 
 
 volumes:
- # navi_vol: 
-  
   omv-navi:
 # ts used for smbw
     driver_opts:
