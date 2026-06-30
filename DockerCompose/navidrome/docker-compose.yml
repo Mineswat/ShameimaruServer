@@ -45,8 +45,8 @@ services:
     volumes:
       #- navi_vol:/data
      # - omv-navi:/music:ro
-      - omv-navi:/Music:ro
-      - omv-navi:/appdata/navidrome/data
+      - omv-navi:/music:ro
+      - omv-navi:/data
 
       #- ./music:/music:ro
     #Resource limits cpu/memory
