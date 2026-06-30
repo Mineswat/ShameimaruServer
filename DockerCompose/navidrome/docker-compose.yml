@@ -24,8 +24,8 @@ services:
     ports:
       - "${PORT:-4533}:${PORT:-4533}"
     environment:
-     # - PUID=1000
-      #- PGID=1000
+      - PUID=1000
+      - PGID=1000
       - TZ=Europe/Madrid
       - ND_SCANINTERVAL=1m
       - ND_LOGLEVEL=info
