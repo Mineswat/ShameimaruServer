@@ -45,7 +45,7 @@ services:
     volumes:
       #- navi_vol:/data
      # - omv-navi:/music:ro
-      - omv-navi:/appdata/navidrome/music:ro
+      - omv-navi:/music:ro
       - omv-navi:/data
 
       #- ./music:/music:ro
