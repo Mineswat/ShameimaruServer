@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Setup Steps for installing Server Debian.md",
+                "file": "Docker Storage.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Setup Steps for installing Server Debian"
+              "title": "Docker Storage"
             }
           }
         ]
@@ -194,12 +194,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6887d7be0598dfd6",
+  "active": "7b5b481bbcee9b60",
   "lastOpenFiles": [
+    "Setup Steps for installing Server Debian.md",
+    "Docker Storage.md",
     "DockerCompose/homarr/docker-compose.yml",
     "DockerCompose/homarr",
     "README.md",
-    "Setup Steps for installing Server Debian.md",
     "DockerCompose/cloudflared/Cloudflare.md",
     "DockerCompose/Source Control/perforce/docker-compose.yml",
     "DockerCompose/Source Control/perforce",
