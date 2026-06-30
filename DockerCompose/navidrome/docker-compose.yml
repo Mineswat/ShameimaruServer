@@ -19,6 +19,11 @@ services:
       - ND_SESSIONTIMEOUT=24h
       - ND_DEFAULTDOWNLOADABLESHARE=true
       - ND_ENABLEINSIGHTSCOLLECTOR=false
+
+    healthcheck:
+      disable: false
+      
+
     volumes:
       #- navi_vol:/data
       - omv-navi:/music:ro
