@@ -21,8 +21,8 @@ services:
       - ND_ENABLEINSIGHTSCOLLECTOR=false
     volumes:
       #- navi_vol:/data
-      - omvNetwork:/music:ro
-      - omvNetwork:/appdata/navidrome/data
+      - omv-navi:/music:ro
+      - omv-navi:/appdata/navidrome/data
 
       #- ./music:/music:ro
 
@@ -30,7 +30,7 @@ services:
 volumes:
  # navi_vol: 
   
-  omvNetwork:
+  omv-navi:
 # ts used for smbw
     driver_opts:
       type: cifs
