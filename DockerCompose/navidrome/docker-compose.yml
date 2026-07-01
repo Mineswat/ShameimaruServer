@@ -53,8 +53,8 @@ services:
     deploy:
       resources:
         limits:
-            memory: ${MEMORY}
-            cpus: ${CPU:"1.0"}
+            memory: ${MEMORY:-256M}
+            cpus: ${CPU:-"1.0"}
 
 
 
