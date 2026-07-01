@@ -54,7 +54,7 @@ services:
       resources:
         limits:
             memory: ${MEMORY:-256M}
-            cpus: ${CPU:-"1.0"}
+            cpus: ${CPU:-1.0}
 
 
 
