@@ -2,18 +2,6 @@
 # se the latest stable versioning
 #keep services modular
 #use env variables for secrets and service settings  DB_HOST=${DB_HOST}
-#use custom networks to manage how services communicate with each other
-#use .env files
-#apply resource limits (cpu and memory) services:
-#  api:
-#    deploy:
-#      resources:
-#        limits:
-#          memory: 512M
-#          cpus: "1.0"
-# properly document ts
-#dattabayo music!!! 
- 
 
 name: ${SERVICENAME}
 
@@ -28,7 +16,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/Madrid
+      - TZ=Europe/London
       - ND_SCANINTERVAL=1m
       - ND_LOGLEVEL=info
       - ND_PORT=${PORT:-4533}
@@ -36,6 +24,7 @@ services:
       - ND_SESSIONTIMEOUT=24h
       - ND_DEFAULTDOWNLOADABLESHARE=true
       - ND_ENABLEINSIGHTSCOLLECTOR=false
+      - ND_PROMETHEUS_ENABLED=false
 
     healthcheck:
       test: ["CMD-SHELL", "wget -q --spider --proxy off http://localhost:4533/ping || exit 1"]

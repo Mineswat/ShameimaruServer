@@ -14,6 +14,8 @@ services:
 
     environment:
       TZ: "Europe/London"
+      INITIAL_ADMIN_EMAIL: ${EMAIL}
+      INITIAL_ADMIN_PASSWORD: ${PASSWORD}
 
       # Uncomment this if you want to change the location of
       # the SQLite DB file within the container
@@ -22,6 +24,14 @@ services:
       # Uncomment this if IPv6 is not enabled on your host
       # DISABLE_IPV6: 'true'
 
+
+
+    healthcheck:
+      test: ["CMD", "/usr/bin/check-health"]
+      interval: 10s
+      timeout: 3s
+
+
     volumes:
       - nvol:/data
       - nvol_letsencrypt:/etc/letsencrypt
@@ -29,3 +39,7 @@ services:
 volumes:
  nvol:
  nvol_letsencrypt:
+
+
+
+
