@@ -21,7 +21,7 @@ services:
         limits:
             memory: ${HARDMEMORY:-256M}
             #hard memory limit
-            cpus: 0.01
+            cpus: 1
 
 
 
