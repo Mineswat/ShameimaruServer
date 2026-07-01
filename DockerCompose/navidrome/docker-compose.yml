@@ -19,7 +19,7 @@ name: ${SERVICENAME}
 
 services:
 
-  navidrome:
+  ${SERVICENAME}:
     image: deluan/navidrome:latest
     container_name: navi
     restart: unless-stopped
