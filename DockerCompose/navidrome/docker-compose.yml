@@ -22,21 +22,21 @@ services:
     container_name: navi
     restart: unless-stopped
     ports:
-      - "${PORT:-4533}:${PORT:-4533}"
+      - "${PORT}:${PORT}"
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Madrid
       - ND_SCANINTERVAL=1m
       - ND_LOGLEVEL=info
-      - ND_PORT=4533
+      - ND_PORT=${PORT}
       - ND_TRANSCODINGCACHESIZE=100MB
       - ND_SESSIONTIMEOUT=24h
       - ND_DEFAULTDOWNLOADABLESHARE=true
       - ND_ENABLEINSIGHTSCOLLECTOR=false
 
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:4533"]
+      test: ["CMD", "curl", "-f", "http://localhost"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -53,7 +53,7 @@ services:
     deploy:
       resources:
         limits:
-            memory: 512M
+            memory: 256M
             cpus: "1.0"
 
 
