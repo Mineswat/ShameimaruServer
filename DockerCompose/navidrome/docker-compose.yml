@@ -53,8 +53,13 @@ services:
     deploy:
       resources:
         limits:
-            memory: ${MEMORY:-256M}
+            memory: ${HARDMEMORY:-256M}
+            #hard memory limit
             cpus: ${CPU:-1.0}
+
+      reservations:
+        memory: ${SOFTMEMEMORY}
+        #soft memory limit
 
 
 
