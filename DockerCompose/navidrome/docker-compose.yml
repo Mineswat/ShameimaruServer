@@ -22,14 +22,14 @@ services:
     container_name: navi
     restart: unless-stopped
     ports:
-      - "${PORT}:${PORT}"
+      - "${PORT:-4533}:${PORT:-4533}"
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Madrid
       - ND_SCANINTERVAL=1m
       - ND_LOGLEVEL=info
-      - ND_PORT=${PORT}
+      - ND_PORT=${PORT:-4533}
       - ND_TRANSCODINGCACHESIZE=100MB
       - ND_SESSIONTIMEOUT=24h
       - ND_DEFAULTDOWNLOADABLESHARE=true
