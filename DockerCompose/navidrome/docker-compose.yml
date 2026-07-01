@@ -36,7 +36,7 @@ services:
       - ND_ENABLEINSIGHTSCOLLECTOR=false
 
     healthcheck:
-      test: ["ping"]
+      test: ["CMD-SHELL", "wget -q --spider --proxy off http://localhost:4533/ping || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
