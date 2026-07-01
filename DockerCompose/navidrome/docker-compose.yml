@@ -36,7 +36,7 @@ services:
       - ND_ENABLEINSIGHTSCOLLECTOR=false
 
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost"]
+      test: ["CMD", "curl", "-f", "http://localhost:4533"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -53,8 +53,8 @@ services:
     deploy:
       resources:
         limits:
-            memory: 256M
-            cpus: "1.0"
+            memory: ${MEMORY:256MB}
+            cpus: ${CPU:"1.0"}
 
 
 
