@@ -75,7 +75,6 @@ services:
 volumes:
   model-cache:
   media-omv:
-   external: true
   
   database-omv:
   # ts used for smbw
