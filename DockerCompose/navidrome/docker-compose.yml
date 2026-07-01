@@ -57,9 +57,9 @@ services:
             #hard memory limit
             cpus: ${CPU:-1.0}
 
-      reservations:
-        memory: ${SOFTMEMEMORY}
-        #soft memory limit
+        reservations:
+          memory: ${SOFTMEMEMORY}
+          #soft memory limit
 
 
 
