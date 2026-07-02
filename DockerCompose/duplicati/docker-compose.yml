@@ -1,0 +1,17 @@
+version: "2.1"
+services:
+  duplicati:
+    image: lscr.io/linuxserver/duplicati:latest
+    container_name: duplicati
+    environment:
+      - PUID=1000      # Replace with your user ID
+      - PGID=1000      # Replace with your group ID
+      - TZ=Europe/London # Set your timezone
+      - DUPLICATI__WEBSERVICE_PASSWORD=password # Optional but recommended
+    volumes:
+      - ./config:/config       # Stores Duplicati settings and database
+      - ./backups:/backups     # Local destination for backup files
+      - /path/to/source:/source:ro # Host directory to back up (read-only)
+    ports:
+      - 8200:8200              # Web interface access
+    restart: unless-stopped   
