@@ -6,7 +6,8 @@ services:
       - PUID=1000      # Replace with your user ID
       - PGID=1000      # Replace with your group ID
       - TZ=Europe/London # Set your timezone
-      - DUPLICATI__WEBSERVICE_PASSWORD=${PASSWORD} # Optional but recommended
+      - DUPLICATI__WEBSERVICE_PASSWORD=${PASSWORD}
+      - SETTINGS_ENCRYPTION_KEY= ${ENCRYPTION_KEY} # Optional but recommended
     volumes:
       - ./config:/config       # Stores Duplicati settings and database
       - ./backups:/backups     # Local destination for backup files
