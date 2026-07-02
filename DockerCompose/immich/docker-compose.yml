@@ -18,7 +18,10 @@ services:
     #   service: cpu # set to one of [nvenc, quicksync, rkmpp, vaapi, vaapi-wsl] for accelerated transcoding
     volumes:
       # Do not edit the next line. If you want to change the media storage location on your system, edit the value of UPLOAD_LOCATION in the .env file
-      - ${UPLOAD_LOCATION}:/data
+     
+     # - ${UPLOAD_LOCATION}:/data
+      -  storage-omv:/data
+
       - /etc/localtime:/etc/localtime:ro
     
     ports:
@@ -72,3 +75,10 @@ services:
 
 volumes:
   model-cache:
+   
+  storage-omv:
+  # ts used for smb
+    driver_opts:
+      type: cifs
+      o: 'iocharset=utf8,username=Mineswat,password=Komaru1!,rw' # change to `ro` if read only desired
+      device: "//192.168.0.88/Root/Media/Gallery/immich"
