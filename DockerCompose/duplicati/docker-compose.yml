@@ -1,4 +1,3 @@
-version: "2.1"
 services:
   duplicati:
     image: lscr.io/linuxserver/duplicati:latest
@@ -7,11 +6,20 @@ services:
       - PUID=1000      # Replace with your user ID
       - PGID=1000      # Replace with your group ID
       - TZ=Europe/London # Set your timezone
-      - DUPLICATI__WEBSERVICE_PASSWORD=password # Optional but recommended
+      - DUPLICATI__WEBSERVICE_PASSWORD=${PASSWORD} # Optional but recommended
     volumes:
       - ./config:/config       # Stores Duplicati settings and database
       - ./backups:/backups     # Local destination for backup files
-      - /path/to/source:/source:ro # Host directory to back up (read-only)
+      - backup-omv:/source:ro # Host directory to back up (read-only)
     ports:
       - 8200:8200              # Web interface access
     restart: unless-stopped   
+
+
+
+    backup-omv:
+  # ts used for smb
+    driver_opts:
+      type: cifs
+      o: 'iocharset=utf8,username=Mineswat,password=Komaru1!,rw' # change to `ro` if read only desired
+      device: "//192.168.0.88/Root"
