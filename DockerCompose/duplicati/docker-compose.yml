@@ -11,7 +11,7 @@ services:
     volumes:
       - ./config:/config       # Stores Duplicati settings and database
       - ./backups:/backups     # Local destination for backup files
-      - backup-omv:/source #:ro # Host directory to back up (read-only)
+      - backup-omv:/source:rw #:ro # Host directory to back up (read-only)
     ports:
       - 8200:8200              # Web interface access
     restart: unless-stopped   
