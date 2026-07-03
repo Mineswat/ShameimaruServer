@@ -11,7 +11,7 @@ services:
       - TORRENTING_PORT=6887
     volumes:
       - tconfig:/config
-      - Root-OMV:/Downloads #optional
+      - Q-OMV:/Downloads #optional
     ports:
       - 8080:8080
       - 6887:6887
@@ -21,5 +21,4 @@ services:
 
 volumes:
  tconfig:
- Root-OMV:
-   external: true
+ Q-OMV:
