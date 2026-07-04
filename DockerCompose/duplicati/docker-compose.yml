@@ -5,18 +5,16 @@ services:
     environment:
       - PUID=1000      # Replace with your user ID
       - PGID=1000      # Replace with your group ID
-      - TZ=Europe/London # Set your timezone
+      - TZ=Europe/London # Set your timezone LONDON FTW
       - DUPLICATI__WEBSERVICE_PASSWORD=${PASSWORD}
       - SETTINGS_ENCRYPTION_KEY= ${ENCRYPTION_KEY} # Optional but recommended
     volumes:
       - ./config:/config       # Stores Duplicati settings and database
       - ./backups:/backups     # Local destination for backup files
-      - backup-omv:/source:rw #:ro # Host directory to back up (read-only)
+      - backup-omv:/source:ro #:ro #i added this for my open media vault, probably change the vol if your stealing this
     ports: 
       - ${PORT:-8200}:${PORT:-8200}              # Web interface access
     restart: unless-stopped   
-
-
 
 
 volumes:
