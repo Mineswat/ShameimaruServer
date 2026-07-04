@@ -1,4 +1,5 @@
 # docker-compose.yml
+#has no persistant volume cause cba to ever use this one 
 services:
   convertx:
     image: ghcr.io/c4illin/convertx

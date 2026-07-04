@@ -1,13 +1,21 @@
 
 services:
+
   cloudflared:
     image: cloudflare/cloudflared:latest
     container_name: cloudflared
     restart: unless-stopped
     command: tunnel --no-autoupdate run --token ${TUNNEL_TOKEN}
-    # Optional: Health check
+    network_mode: host
     healthcheck:
       test: ["CMD", "cloudflared", "--version"]
       interval: 30s
       timeout: 10s
       retries: 3
+    
+    networks:
+      - cftunnel
+
+networks:
+  cftunnel:
+#not that necessary to use a network tunnel since they all can js collectively use the same network host unless doing some complex situation which i will not be doing

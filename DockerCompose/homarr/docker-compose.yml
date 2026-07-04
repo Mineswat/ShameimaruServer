@@ -19,12 +19,9 @@ services:
     deploy:
       resources:
         limits:
-            memory: ${HARDMEMORY:-256M}
+            memory: ${HARDMEMORY:-512M}
             #hard memory limit
             cpus: 1
-
-
-
 
 
 volumes:
