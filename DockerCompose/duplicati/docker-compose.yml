@@ -15,6 +15,16 @@ services:
     ports: 
       - ${PORT:-8200}:${PORT:-8200}              # Web interface access
     restart: unless-stopped   
+    
+    deploy:
+      resources:
+        limits:
+
+            memory: ${HARDMEMORY:-512M}
+            #hard memory limit
+
+            cpus: ${CPU:-1}
+            #cpu usage limit
 
 
 volumes:
