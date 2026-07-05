@@ -22,7 +22,7 @@ services:
             memory: ${HARDMEMORY:-512M}
             #hard memory limit
 
-            cpus: ${CPU:-1}
+            cpus: ${CPU:-2}
             #cpu usage limit
 
 
