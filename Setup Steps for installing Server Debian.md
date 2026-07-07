@@ -2,7 +2,7 @@
 
 # Allowing Root SSH
 
-Install 
+Install debian 3
 
 ```
 
