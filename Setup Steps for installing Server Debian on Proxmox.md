@@ -7,7 +7,7 @@
 ```
 
 ON ROOT
-apt install sudo
+sudo apt install sudo
 adduser <username> sudo
 
 ssh-keygen -t ed25519 -C "admin@homelab"
