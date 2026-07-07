@@ -4,8 +4,6 @@
 3. Install debian with only SSH Server
 4. Install sudo on ROOT
 
-
-
 ```
 
 ON ROOT
