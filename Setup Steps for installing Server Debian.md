@@ -2,7 +2,7 @@
 
 # Allowing Root SSH
 
-Install Debian 3
+[Install Debian 3](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso)
 
 
 ```
