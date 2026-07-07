@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Setup Steps for installing Server Debian.md",
+                "file": "Setup Steps for installing Server Debian on Proxmox.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Setup Steps for installing Server Debian"
+              "title": "Setup Steps for installing Server Debian on Proxmox"
             }
           }
         ]
@@ -199,7 +199,7 @@
     "Docker Storage.md",
     "DockerCompose/wordpress/docker-compose.yml",
     "DockerCompose/wordpress",
-    "Setup Steps for installing Server Debian.md",
+    "Setup Steps for installing Server Debian on Proxmox.md",
     "DockerCompose/homarr/docker-compose.yml",
     "DockerCompose/homarr",
     "README.md",
