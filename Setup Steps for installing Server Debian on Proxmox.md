@@ -2,7 +2,7 @@
 1. [Install Debian 3](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso) on promox local
 2. create vm with at least 10GB, Q35,UEFI and over 2GB ram
 3. Install debian with only SSH Server
-4. Instal
+4. Install sudo
 
 
 
@@ -25,18 +25,6 @@ sudo systemctl restart ssh
 
 ```
 
-
-1. sudo passwd root. create a root password
-2. enable ssh password root to be SSH'D by  
-3. Restart sssh
-```
-   nano /etc/ssh/sshd_config 
-   # find PermitRootLogin to yes and uncomment it
-   sudo systemctl restart ssh
-
-```
- 
-```
 sudo apt update
 sudo apt install ca-certificates curl ufw 
 sudo install -m 0755 -d /etc/apt/keyrings
