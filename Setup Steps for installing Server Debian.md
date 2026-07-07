@@ -19,11 +19,22 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 
 
 # Allowing Root SSH
-
+v
 ```
+
+
 apt install sudo
 adduser <username> sudo
 
+ssh-keygen -t ed25519 -C "admin@homelab"
+ssh-copy-id youruser@<VM-IP>
+# On the VM:
+sudoedit /etc/ssh/sshd_config
+# Set:
+#   PermitRootLogin no
+#   PasswordAuthentication no
+#   PubkeyAuthentication yes
+sudo systemctl restart ssh
 
 ```
 
