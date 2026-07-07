@@ -12,6 +12,7 @@ services:
       - net_admin
       - net_raw
     restart: unless-stopped
+    network_mode: host
 
   nginx:
     image: nginx:latest
