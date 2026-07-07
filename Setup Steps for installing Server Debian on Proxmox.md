@@ -2,7 +2,7 @@
 1. [Install Debian 3](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso) on promox local
 2. create vm with at least 10GB, Q35,UEFI and over 2GB ram
 3. install debian with only SSH Server
-4. 
+4.  
 
 # Allowing Root SSH
 
