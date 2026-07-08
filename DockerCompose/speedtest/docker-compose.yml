@@ -22,5 +22,5 @@ services:
     volumes:
       - /path/to/speedtest-tracker/data:/config
     ports:
-      - 83:80
+      - 80:80
     restart: unless-stopped
