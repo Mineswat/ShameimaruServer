@@ -25,4 +25,4 @@ services:
       - 83:80
     restart: unless-stopped
 volumes:
- st_vol
+ st_vol:
