@@ -19,7 +19,6 @@ services:
       - ${TORRENT_PORT:-6887}:${TORRENT_PORT:-6887}/udp
     stop_grace_period: "10s" #optional
     restart: unless-stopped
-    network_mode: host
 
 volumes:
  tconfig:
