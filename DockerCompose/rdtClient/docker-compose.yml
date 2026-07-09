@@ -4,8 +4,8 @@ services:
     image: rogerfar/rdtclient
     container_name: rdtclient
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=29
+      - PGID=29
       - TZ=Europe/London
     volumes:
       - ./data:/data/db
