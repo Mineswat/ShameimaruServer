@@ -2,7 +2,8 @@
 1. [Install Debian 3](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso) on promox local
 2. create vm with at least 10GB, Q35,UEFI and over 2GB ram
 3. Install debian with only SSH Server
-4. Install sudo on ROOT
+4. sudo apt update && sudo apt upgrade
+5. Install sudo ufw curl ca-certificates git ca-certificates wget command-not-found git build-essential  on ROOT
 
 ```
 
