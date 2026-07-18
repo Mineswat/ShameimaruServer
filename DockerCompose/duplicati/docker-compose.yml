@@ -11,7 +11,7 @@ services:
     volumes:
       - ./config:/config       # Stores Duplicati settings and database
       - ./backups:/backups     # Local destination for backup files
-      - backup-omv:/source:ro #:ro #i added this for my open media vault, probably change the vol if your stealing this
+      - root-omv:/source:ro #:ro #i added this for my open media vault, probably change the vol if your stealing this
     ports: 
       - ${PORT:-8200}:${PORT:-8200}              # Web interface access
     restart: unless-stopped   
@@ -19,17 +19,16 @@ services:
     deploy:
       resources:
         limits:
-
             memory: ${HARDMEMORY:-512M}
             #hard memory limit
 
             cpus: ${CPU:-1}
             #cpu usage limit
 
+   
 
-volumes:
-    backup-omv:
-      driver_opts:
-        type: cifs
-        o: 'iocharset=utf8,username=Mineswat,password=Komaru1!,rw' # change to `ro` if read only desired
-        device: "//192.168.0.88/Root"
+
+   volumes:
+    root-omv:
+      external: true
+      
