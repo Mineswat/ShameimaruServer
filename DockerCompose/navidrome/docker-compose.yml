@@ -25,6 +25,9 @@ services:
       - ND_DEFAULTDOWNLOADABLESHARE=true
       - ND_ENABLEINSIGHTSCOLLECTOR=false
       - ND_PROMETHEUS_ENABLED=false
+      - ND_LASTFM_APIKEY=${LASTFM_KEY}
+      - ND_LASTFM_SECRET=${LASTFM_SECRET}
+      
 
     healthcheck:
       test: ["CMD-SHELL", "wget -q --spider --proxy off http://localhost:4533/ping || exit 1"]
