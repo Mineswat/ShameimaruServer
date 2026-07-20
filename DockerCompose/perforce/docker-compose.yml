@@ -1,0 +1,26 @@
+services:
+  perforce:
+    image: perforce/helix-swarm:latest
+    container_name: perforce
+    restart: unless-stopped
+    ports:
+      - 7379:7379
+    volumes:
+      - p4_config:/opt/perforce/swarm/data
+      
+    environment:
+      - P4D_SUPER=super
+      - P4D_SUPER_PASSWD=HelixDockerBay94
+      - P4D_PORT=ssl:myperforce:1666
+      - SWARM_USER=swarm
+      - SWARM_PASSWD=HelixDockerBay94
+      - SWARM_HOST=mymachine
+      - SWARM_FORCE_EXT=y
+
+      
+      
+
+volumes:
+  p4_config:
+  p4_storage:
+  
