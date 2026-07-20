@@ -11,7 +11,7 @@ services:
     environment:
       - P4D_SUPER=super
       - P4D_SUPER_PASSWD=HelixDockerBay94
-      - P4D_PORT=ssl:myperforce:1666
+      #- P4D_PORT=ssl:myperforce:1666
       - SWARM_USER=swarm
       - SWARM_PASSWD=HelixDockerBay94
       - SWARM_HOST=mymachine
