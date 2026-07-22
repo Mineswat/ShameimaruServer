@@ -6,7 +6,8 @@ Heyyy i made this for js creating a simple debian server on PROXMOX
 2. create vm with at least 10GB, Q35,UEFI and over 2GB ram
 3. Install debian with only SSH Server
 4. sudo apt update && sudo apt upgrade -y
-5. Install sudo ufw curl ca-certificates git ca-certificates wget gpg command-not-found git build-essential  
+5. Install sudo ufw curl ca-certificates git ca-certificates wget gpg command-not-found git build-essential
+6. sudo usermod -aG docker $USER   
 
 ```
 
