@@ -4,8 +4,8 @@ services:
     image: docker.gitea.com/gitea:1.27.0
     container_name: gitea
     environment:
-      - USER_UID=1000
-      - USER_GID=1000
+#      - USER_UID=1000
+#      - USER_GID=1000
       - GITEA__database__DB_TYPE=mysql
       - GITEA__database__HOST=db:3306
       - GITEA__database__NAME=gitea
