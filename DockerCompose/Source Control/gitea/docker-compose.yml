@@ -15,7 +15,7 @@ services:
     networks:
       - gitea
     volumes:
-      - gitea_data:/data
+      - gitea_data:/data:rw
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
